@@ -19,8 +19,9 @@ BigCommerce Navigation Brand Listing Images
 
 ## Resources
 
-1. [jQuery.first()](http://api.jquery.com/first/)
-2. [How to return the response from an asynchronous call?](http://stackoverflow.com/questions/14220321/how-to-return-the-response-from-an-asynchronous-call)
+1. [How to return the response from an asynchronous call?](http://stackoverflow.com/questions/14220321/how-to-return-the-response-from-an-asynchronous-call)
+2. [jQuery.first()](http://api.jquery.com/first/)
+3. [jQuery.each()](http://api.jquery.com/jQuery.each/)
 
 ## Some BigCommerce modules I made
 
