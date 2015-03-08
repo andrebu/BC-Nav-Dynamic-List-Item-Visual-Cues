@@ -1,0 +1,54 @@
+<script language="javascript" type="text/javascript">
+//Side Navigation Brands Logos
+    $('<style type="text/css">\
+			/* Side Navigation Brands Logos */\
+			#SideShopByBrand .treeview li {\
+				border-bottom: solid 1px #e4e4e4;\
+			}\
+			#SideShopByBrand .treeview .navBrandListingImage {\
+				display: inline-block;\
+				width: 30px;\
+				padding: 6px 16px 6px 6px;\
+				vertical-align: middle;\
+			}\
+			#SideShopByBrand .treeview a {\
+				display: inline-block;\
+				border-bottom: none;\
+			}\
+			</style>')
+        .appendTo('head');
+	$(document).ready(function () {
+		var brandNameImagePairs = [];
+		$.ajax({
+			url: "/brands/",
+		    type: 'GET',
+		    dataType: 'html',
+		    success : function(brandPage) {
+			    brandImagesListings(brandPage);
+			}
+		});
+	
+		var mainPage = $(this);
+		var navBrandListings = mainPage.find('.Left .BrandList').first().find('.BlockContent .treeview li');
+		var navBrandListingName = [];
+		
+		function brandImagesListings(brandPage){
+			var brandPageListings = $(brandPage).find('.SubBrandListGrid');
+			brandPageListings.find('li:not(.RowDivider)').each(function() {
+			    var brandText = $(this).find('.brand-name').text();
+			    var brandUrl = $(this).find('.brand-img img').attr('src');
+			    brandNameImagePairs.push({
+			        name: brandText,
+			        url: brandUrl
+			    });
+				var brandPair = brandNameImagePairs.pop();
+				navBrandListings.find('a').each(function() {
+					var brandText = $(this).text();
+					if (brandText == brandPair.name) {
+						$(this).before('<img class="navBrandListingImage" src="' + brandPair.url + '" />');
+					};
+				});
+			});
+		}
+	});
+</script>
