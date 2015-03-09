@@ -22,6 +22,9 @@ BigCommerce Navigation Brand Listing Images
 1. [How to return the response from an asynchronous call?](http://stackoverflow.com/questions/14220321/how-to-return-the-response-from-an-asynchronous-call)
 2. [jQuery.first()](http://api.jquery.com/first/)
 3. [jQuery.each()](http://api.jquery.com/jQuery.each/)
+4. [Add dynamic key, value pairs to JavaScript array or hash table](http://stackoverflow.com/questions/9398535/add-dynamic-key-value-pairs-to-javascript-array-or-hash-table)
+5. [jQuery contains() with a variable syntax](http://stackoverflow.com/questions/2191419/jquery-contains-with-a-variable-syntax)
+6. [How to make a JQuery Script Only Fire Once](http://stackoverflow.com/questions/11439691/how-to-make-a-jquery-script-only-fire-once) - not used
 
 ## Some BigCommerce modules I made
 
