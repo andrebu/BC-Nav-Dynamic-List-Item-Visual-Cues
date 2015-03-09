@@ -3,18 +3,19 @@
     $('<style type="text/css">\
 			/* Side Navigation Brands Logos */\
 			#SideShopByBrand .treeview li {\
-				border-bottom: solid 1px #e4e4e4;\
+				/*border-bottom: solid 1px #e4e4e4;*/\
+				margin-bottom: 0;\
 			}\
 			#SideShopByBrand .treeview .navBrandListingImage {\
 				display: inline-block;\
 				width: 30px;\
-				padding: 6px 16px 6px 6px;\
+				padding: 0 16px 0 6px;\
 				vertical-align: middle;\
 			}\
 			#SideShopByBrand .treeview a {\
-				display: inline-block;\
-				border-bottom: none;\
+				display: block;\
 				vertical-align: middle;\
+				padding: 10px 0;\
 			}\
 			</style>')
         .appendTo('head');
@@ -49,14 +50,14 @@
 				var navBrandText = $(this).text();
 				var currentBrandListing = $(this).find('a:contains("' + navBrandText + '")');
 				var brandImageInsert = '<img class="navBrandListingImage" src="' + brandNameImagePairs[navBrandText] + '" />';
-				currentBrandListing.before(brandImageInsert);
+				currentBrandListing.prepend(brandImageInsert);
 			});
 			
 			mobileNavBrandListings.each(function() {
 				var navBrandText = $(this).text();
 				var currentBrandListing = $(this).find('a:contains("' + navBrandText + '")');
 				var brandImageInsert = '<img class="navBrandListingImage" src="' + brandNameImagePairs[navBrandText] + '" />';
-				currentBrandListing.before(brandImageInsert);
+				currentBrandListing.prepend(brandImageInsert);
 			});
 
 			navBrandListings.parent().addClass('withBrandImages');
