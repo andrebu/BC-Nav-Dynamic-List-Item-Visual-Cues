@@ -1,13 +1,5 @@
 # BC-Nav-Brand-Listing-Images
-BigCommerce Navigation Brand Listing Images
-
-
-##To Do
-
-1. Add installation instuctions
-2. Appify
-3. Create webpage and add module to list
-
+BigCommerce Navigation Dynamic List Item Visual Cues
 
 ## Installation
 
@@ -39,6 +31,15 @@ BigCommerce Navigation Brand Listing Images
 ## Using
 
     Just install and it'll do the work for you!  
+
+
+##To Do
+
+1. ~Add installation instuctions~
+2. Appify
+3. Create webpage and add module to list
+
+
 
 ## Resources
 
