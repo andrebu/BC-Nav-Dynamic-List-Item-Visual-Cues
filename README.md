@@ -51,6 +51,7 @@ BigCommerce Navigation Dynamic List Item Visual Cues
 6. [How to make a JQuery Script Only Fire Once](http://stackoverflow.com/questions/11439691/how-to-make-a-jquery-script-only-fire-once) - not used
 7. [Iterate a script X times](http://stackoverflow.com/questions/6310206/iterate-a-script-x-times)
 8. [jQuery.prepend()](http://api.jquery.com/prepend/)
+9. [The Shapes of CSS - CSS-Tricks](https://css-tricks.com/examples/ShapesOfCSS/)
 
 ## Some BigCommerce modules I made
 
