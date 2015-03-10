@@ -2,24 +2,63 @@
 //Side Navigation Brands Logos
     $('<style type="text/css">\
 			/* Side Navigation Brands Logos */\
-			#SideShopByBrand .treeview li {\
+			.Left #SideShopByBrand .treeview li, \
+			#DrawerMenu #SideShopByBrand .treeview li {\
 				/*border-bottom: solid 1px #e4e4e4;*/\
 				margin-bottom: 0;\
 			}\
-			#SideShopByBrand .treeview .navBrandListingImage {\
+			.Left #SideShopByBrand .treeview li a, \
+			#DrawerMenu #SideShopByBrand .treeview li a {\
+				display: block;\
+				vertical-align: middle;\
+				padding: 10px 0;\
+			}\
+			.Left #SideShopByBrand .treeview li a .navBrandListingImage, \
+			#DrawerMenu #SideShopByBrand .treeview li a .navBrandListingImage {\
 				display: inline-block;\
 				width: 30px;\
 				padding: 0 16px 0 6px;\
 				vertical-align: middle;\
 			}\
-			#SideShopByBrand .treeview a {\
+			/* Dollar USD */\
+			.fa-dollar:before, .fa-usd:before {\
+				content: "\\f155";\
+			}\
+			#SideShopByPrice .treeview li a .fa-usd {\
 				display: block;\
 				vertical-align: middle;\
-				padding: 10px 0;\
+				padding: 0 3px 0 0;\
+				float: right;\
+				font-size: 18px;\
+				color: #ffd200;\
+				transition: all .13s ease-in-out;\
+			}\
+			#SideShopByPrice .treeview li:hover a .fa-usd {\
+				-webkit-transform: rotate(-10deg);\
+				-moz-transform: rotate(-10deg);\
+				-o-transform: rotate(-10deg);\
+				transform: rotate(-10deg);\
+				color: #39b54a;\
+				padding: 0 5px 0 0;\
 			}\
 			</style>')
         .appendTo('head');
 	$(document).ready(function () {
+		var mainPage = $(this);
+		//Add Dollar signs to #SideShopByPrice
+		var shopByPriceNavListings = mainPage.find('.Left #SideShopByPrice').first().find('.BlockContent .treeview li a');
+		//var mobileshopByPriceNavListings = mainPage.find('.Left #SideShopByPrice').first().find('.BlockContent .treeview li');
+		var shopByPriceListingCounter = 0;
+		shopByPriceNavListings.each(function() {
+			var currentShopByPriceNavListingText = $(this).text();
+			var currentShopByPriceNavListingAnchor = $(this);
+			var dollarSignInsert = '<span class="fa fa-usd"></span>';
+			shopByPriceListingCounter++;
+			for(var i = 0; i < shopByPriceListingCounter; i++) {
+				currentShopByPriceNavListingAnchor.prepend(dollarSignInsert);
+			}
+		});
+		//Visit All Brands page and retrive HTML
 		$.ajax({
 			url: "/brands/",
 		    type: 'GET',
@@ -28,13 +67,9 @@
 			    brandImagesListings(brandPage);
 			}
 		});
-	
-		var mainPage = $(this);
+		//Use the data passed earlier via AJAX to attach brand images to respective nav brand list items
 		var navBrandListings = mainPage.find('.Left .BrandList').first().find('.BlockContent .treeview li:not(.last)');
 		var mobileNavBrandListings = mainPage.find('.BrandList').first().find('.BlockContent .treeview li:not(.last)');
-		//var classChecker = navBrandListings.parent().attr('class');
-		
-		//if ( classChecker != 'withBrandImages' ) {}
 		function brandImagesListings(brandPage){
 			var brandNameImagePairs = [];
 			var brandNameImagePair = {};
@@ -45,24 +80,20 @@
 			    brandNameImagePairs[brandText] = brandUrl;
 				return brandNameImagePairs;
 			});
-
 			navBrandListings.each(function() {
 				var navBrandText = $(this).text();
 				var currentBrandListing = $(this).find('a:contains("' + navBrandText + '")');
 				var brandImageInsert = '<img class="navBrandListingImage" src="' + brandNameImagePairs[navBrandText] + '" />';
 				currentBrandListing.prepend(brandImageInsert);
 			});
-			
 			mobileNavBrandListings.each(function() {
 				var navBrandText = $(this).text();
 				var currentBrandListing = $(this).find('a:contains("' + navBrandText + '")');
 				var brandImageInsert = '<img class="navBrandListingImage" src="' + brandNameImagePairs[navBrandText] + '" />';
 				currentBrandListing.prepend(brandImageInsert);
 			});
-
 			navBrandListings.parent().addClass('withBrandImages');
 			mobileNavBrandListings.parent().addClass('withBrandImages');
 		}
-		//}
 	});
 </script>
