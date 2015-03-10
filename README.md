@@ -1,4 +1,4 @@
-# BC-Nav-Brand-Listing-Images
+# BC-Nav-Dynamic-List-Item-Visual-Cues
 BigCommerce Navigation Dynamic List Item Visual Cues
 
 ## Installation
