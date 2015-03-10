@@ -11,8 +11,31 @@ BigCommerce Navigation Brand Listing Images
 
 ## Installation
 
-    Will provide later.
+> These are the latest instructions and are up to date.  I will update them as the widget is improved.
 
+1. Upload **BrandNavListingImages.html Panel file** to your folder in WebDAV/dav/template/Panels  
+  1. To access your WebDAV panel, BigCommerce gives you instructions in your Admin Panel.  
+  2. Click "Design" in the top right corner of your store admin panel.  
+  3. Then click "WebDAV" in the "Current Theme" section and follow the instructions
+2. Add %%Panel.BrandNavListingImages%% to bottom of Panels/Footer.html
+  + Example:
+```HTML
+%%SNIPPET_FastCartThickBoxJs%%
+
+
+<!-- ADD Panel reference here -->
+%%Panel.BrandNavListingImages%%
+<!-- ADD Panel reference here -->
+
+    </body>
+</html>​
+```  
+![BigCommerce Navigation Dynamic List Item Visual Cues Installation Example](https://raw.githubusercontent.com/iamandrebulatov/BC-Nav-Brand-Listing-Images/master/Navigation%20Dynamic%20List%20Item%20Visual%20Cues%20Installation-Screen%20Shot%202015-03-09%20at%208.06.40%20PM.png "BigCommerce Navigation Dynamic List Item Visual Cues Installation Example")
+> These are the latest instructions and are up to date.  I will update them as the widget is improved.
+
+
+ 
+ 
 ## Using
 
     Just install and it'll do the work for you!  
@@ -25,6 +48,8 @@ BigCommerce Navigation Brand Listing Images
 4. [Add dynamic key, value pairs to JavaScript array or hash table](http://stackoverflow.com/questions/9398535/add-dynamic-key-value-pairs-to-javascript-array-or-hash-table)
 5. [jQuery contains() with a variable syntax](http://stackoverflow.com/questions/2191419/jquery-contains-with-a-variable-syntax)
 6. [How to make a JQuery Script Only Fire Once](http://stackoverflow.com/questions/11439691/how-to-make-a-jquery-script-only-fire-once) - not used
+7. [Iterate a script X times](http://stackoverflow.com/questions/6310206/iterate-a-script-x-times)
+8. [jQuery.prepend()](http://api.jquery.com/prepend/)
 
 ## Some BigCommerce modules I made
 
