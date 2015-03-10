@@ -35,7 +35,7 @@ BigCommerce Navigation Dynamic List Item Visual Cues
 
 ##To Do
 
-1. ~Add installation instuctions~
+1. ~~Add installation instuctions~~
 2. Appify
 3. Create webpage and add module to list
 
