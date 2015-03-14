@@ -23,7 +23,6 @@ BigCommerce Navigation Dynamic List Item Visual Cues
 </html>​
 ```  
 ![BigCommerce Navigation Dynamic List Item Visual Cues Installation Example](https://raw.githubusercontent.com/iamandrebulatov/BC-Nav-Brand-Listing-Images/master/Navigation%20Dynamic%20List%20Item%20Visual%20Cues%20Installation-Screen%20Shot%202015-03-09%20at%208.06.40%20PM.png "BigCommerce Navigation Dynamic List Item Visual Cues Installation Example")
-> These are the latest instructions and are up to date.  I will update them as the widget is improved.
 
 
  
@@ -53,7 +52,8 @@ BigCommerce Navigation Dynamic List Item Visual Cues
 8. [jQuery.prepend()](http://api.jquery.com/prepend/)
 9. [The Shapes of CSS - CSS-Tricks](https://css-tricks.com/examples/ShapesOfCSS/)
 
-## Some BigCommerce modules I made
+
+## Other BigCommerce modules that I've made
 
 * [BigCommerce Carousel Slider Slide Show Custom](https://github.com/iamandrebulatov/BC-Carousel-Slider-Slide-Show-Custom)
 * [BigCommerce Product Page Demo Videos](https://github.com/iamandrebulatov/BigCommerce-Product-Page-Demo-Videos)
@@ -71,6 +71,8 @@ BigCommerce Navigation Dynamic List Item Visual Cues
 * [BigCommerce Welcoming Age Gate](https://github.com/iamandrebulatov/BC-Welcoming-Age-Gate)
 * [BigCommerce 360 Product View](https://github.com/iamandrebulatov/BC-360-Product-View)
 * [BigCommerce ThumbScroll](https://github.com/iamandrebulatov/BC-ThumbScroll)
+* [BigCommerce Product Accessory Options Choice Upsell](https://github.com/iamandrebulatov/BC-Product-Accessory-Options-Choice-Upsell)
+* [BigCommerce Navigation Dynamic List Item Visual Cues](https://github.com/iamandrebulatov/BC-Nav-Dynamic-List-Item-Visual-Cues)
 
 
 
