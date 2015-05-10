@@ -32,12 +32,12 @@
 			#DrawerMenu #SideShopByBrand .treeview li a .navBrandLiName {\
 				vertical-align: middle;\
 			}\
-			.Left #SideShopByBrand .treeview li a .navBrandListingImage {\
+			/*.Left #SideShopByBrand .treeview li a .navBrandListingImage {\
 				opacity: 0.5;\
 			}\
 			.Left #SideShopByBrand .treeview li:hover a .navBrandListingImage {\
 				opacity: 1;\
-			}\
+			}*/\
 			/* Dollar USD */\
 			.fa-dollar:before, .fa-usd:before {\
 				content: "\\f155";\
@@ -238,6 +238,20 @@
 			});
 			navBrandListings.parent().addClass('withBrandImages');
 			mobileNavBrandListings.parent().addClass('withBrandImages');
+			var navBraLiAnc = mainPage.find('.Left .BrandList').first().find('.BlockContent .treeview li:not(.last) a');
+			var navBrandListingImage = $('.navBrandListingImage');
+			navBraLiAnc.on({
+		        mouseenter: function(event) {
+			        navBrandListingImage.not($(this).find('img')).css('-webkit-filter', 'grayscale(0.75)',
+																		'-moz-filter', 'grayscale(0.75)',
+																		'filter', 'grayscale(0.75)');
+		        },
+		        mouseleave: function(event) {
+			        navBrandListingImage.css('-webkit-filter', 'none',
+												'-moz-filter', 'none',
+												'filter', 'none');
+		        }
+	        });
 		}
 	});
 </script>
