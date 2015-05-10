@@ -1,6 +1,11 @@
 # BC-Nav-Dynamic-List-Item-Visual-Cues
 BigCommerce Navigation Dynamic List Item Visual Cues
 
+
+------------------------------------------------------------------------------------
+
+
+
 ## Installation
 
 > These are the latest instructions and are up to date.  I will update them as the widget is improved.
@@ -25,11 +30,18 @@ BigCommerce Navigation Dynamic List Item Visual Cues
 ![BigCommerce Navigation Dynamic List Item Visual Cues Installation Example](https://raw.githubusercontent.com/iamandrebulatov/BC-Nav-Brand-Listing-Images/master/Navigation%20Dynamic%20List%20Item%20Visual%20Cues%20Installation-Screen%20Shot%202015-03-09%20at%208.06.40%20PM.png "BigCommerce Navigation Dynamic List Item Visual Cues Installation Example")
 
 
+
+------------------------------------------------------------------------------------
+
  
  
 ## Using
 
     Just install and it'll do the work for you!  
+
+
+------------------------------------------------------------------------------------
+
 
 
 ##To Do
@@ -38,6 +50,8 @@ BigCommerce Navigation Dynamic List Item Visual Cues
 2. Appify
 3. Create webpage and add module to list
 
+
+------------------------------------------------------------------------------------
 
 
 ## Resources
@@ -51,6 +65,10 @@ BigCommerce Navigation Dynamic List Item Visual Cues
 7. [Iterate a script X times](http://stackoverflow.com/questions/6310206/iterate-a-script-x-times)
 8. [jQuery.prepend()](http://api.jquery.com/prepend/)
 9. [The Shapes of CSS - CSS-Tricks](https://css-tricks.com/examples/ShapesOfCSS/)
+10. [jQuery: select all elements of a given class on hover, except for this](http://stackoverflow.com/questions/13625862/jquery-select-all-elements-of-a-given-class-on-hover-except-for-this)
+
+
+------------------------------------------------------------------------------------
 
 
 ## Other BigCommerce modules that I've made
@@ -75,10 +93,7 @@ BigCommerce Navigation Dynamic List Item Visual Cues
 * [BigCommerce Navigation Dynamic List Item Visual Cues](https://github.com/iamandrebulatov/BC-Nav-Dynamic-List-Item-Visual-Cues)
 
 
-
-
-
-
+------------------------------------------------------------------------------------
 
 
 
@@ -90,6 +105,10 @@ The absolute best thing to do is to sign up with [ChangeTip](//changetip.com) or
 
 [![ChangeTip donate button](http://andrebulatov.com/wp-content/uploads/tipme_button.png)](//www.changetip.com/tipme/andre.bulatov/ "Donate once-off to this project using ChangeTip")
 [![GratiPay donate button](http://andrebulatov.com/wp-content/uploads/gratipay-button.png)](//www.gratipay.com/andrebulatov/ "Donate once-off to this project using GratiPay")
+
+
+
+------------------------------------------------------------------------------------
 
 
 ## License
