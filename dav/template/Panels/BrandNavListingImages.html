@@ -8,16 +8,28 @@
 				margin-bottom: 0;\
 			}\
 			.Left #SideShopByBrand .treeview li a, \
-			#DrawerMenu #SideShopByBrand .treeview li a {\
+			.Left #SideShopByPrice .treeview li a {\
 				display: block;\
 				vertical-align: middle;\
-				padding: 6px 0;\
+				padding: 7px 7px 7px 10px;\
+				margin: 6px 0 6px 0;\
+				border-left: 4px solid #eee;\
+				border-bottom: 0;\
+			}\
+			.Left #SideShopByBrand .treeview li a:hover, \
+			.Left #SideShopByPrice .treeview li a:hover {\
+				border-left-color: #39B54A;\
+				background: #F3F4F4;\
 			}\
 			.Left #SideShopByBrand .treeview li a .navBrandListingImage, \
 			#DrawerMenu #SideShopByBrand .treeview li a .navBrandListingImage {\
 				display: inline-block;\
-				width: 30px;\
+				width: 20px;\
 				padding: 0 16px 0 6px;\
+				vertical-align: middle;\
+			}\
+			.Left #SideShopByBrand .treeview li a .navBrandLiName, \
+			#DrawerMenu #SideShopByBrand .treeview li a .navBrandLiName {\
 				vertical-align: middle;\
 			}\
 			.Left #SideShopByBrand .treeview li a .navBrandListingImage {\
@@ -214,8 +226,9 @@
 			navBrandListings.each(function() {
 				var navBrandText = $(this).text();
 				var currentBrandListing = $(this).find('a:contains("' + navBrandText + '")');
-				var brandImageInsert = '<img class="navBrandListingImage" src="' + brandNameImagePairs[navBrandText] + '" />';
-				currentBrandListing.prepend(brandImageInsert);
+				var brandImageInsert = '<img class="navBrandListingImage" src="' + brandNameImagePairs[navBrandText] + '" />' +
+										'<span class="navBrandLiName">' + navBrandText + '</span>';
+				currentBrandListing.html(brandImageInsert);
 			});
 			mobileNavBrandListings.each(function() {
 				var navBrandText = $(this).text();
