@@ -27,6 +27,7 @@
 				width: 20px;\
 				padding: 0 16px 0 6px;\
 				vertical-align: middle;\
+				text-align: center;\
 			}\
 			.Left #SideShopByBrand .treeview li a .navBrandLiName, \
 			#DrawerMenu #SideShopByBrand .treeview li a .navBrandLiName {\
@@ -252,6 +253,8 @@
 												'filter', 'none');
 		        }
 	        });
+			var allBrandsLink = mainPage.find('.Left .BrandList').first().find('.BlockContent .treeview li.last a');
+			allBrandsLink.prepend('<icon class="navBrandListingImage fa fa-th"></icon>');
 		}
 	});
 </script>
