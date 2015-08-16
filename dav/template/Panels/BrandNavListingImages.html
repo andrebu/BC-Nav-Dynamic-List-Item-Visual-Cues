@@ -4,7 +4,6 @@
 			/* Side Navigation Brands Logos */\
 			.Left #SideShopByBrand .treeview li, \
 			#DrawerMenu #SideShopByBrand .treeview li {\
-				/*border-bottom: solid 1px #e4e4e4;*/\
 				margin-bottom: 0;\
 			}\
 			.Left #SideShopByBrand .treeview li a, \
@@ -33,12 +32,6 @@
 			#DrawerMenu #SideShopByBrand .treeview li a .navBrandLiName {\
 				vertical-align: middle;\
 			}\
-			/*.Left #SideShopByBrand .treeview li a .navBrandListingImage {\
-				opacity: 0.5;\
-			}\
-			.Left #SideShopByBrand .treeview li:hover a .navBrandListingImage {\
-				opacity: 1;\
-			}*/\
 			/* Dollar USD */\
 			.fa-dollar:before, .fa-usd:before {\
 				content: "\\f155";\
@@ -132,13 +125,6 @@
 			         -o-transform: rotate(60deg);\
 			            transform: rotate(60deg);\
 			}\
-			/*#SideCategoryList .treeview li:hover .navVisualCue.newItems {\
-			    -webkit-transform: rotate(360deg);\
-			       -moz-transform: rotate(360deg);\
-			        -ms-transform: rotate(360deg);\
-			         -o-transform: rotate(360deg);\
-			            transform: rotate(360deg);\
-			}*/\
 			.navVisualCue.newItems {\
 				top: -24px;\
 			}\
@@ -177,20 +163,16 @@
 			}\
 			</style>')
         .appendTo('head');
-	$(document).ready(function () {
+	function navMenuFuncs() {
 		$('.hitarea.expandable-hitarea').click();
 		var mainPage = $(this);
 		//Add visual cues to Category list items
 		var categoryListItems = mainPage.find('.Left #SideCategoryList').first().find('.BlockContent .treeview li');
-		//var mobileCategoryListItems = mainPage.find('.Left #SideShopByPrice').first().find('.BlockContent .treeview li');
 		var newItemsCue = '<div class="navVisualCue newItems"><span class="newItemSpan">NEW!</span><div class="burst-12"></div></div>';
-		//$(categoryListItems).find('a:contains("New Items")').append(newItemsCue);
 		var onSaleCue = '<div class="navVisualCue onSale"><span class="onSaleSpan">On Sale</span></div>';
-		//$(categoryListItems).find('a:contains("Sale")').append(onSaleCue);
 		
 		//Add Dollar signs to #SideShopByPrice
 		var shopByPriceNavListings = mainPage.find('.Left #SideShopByPrice').first().find('.BlockContent .treeview li a');
-		//var mobileshopByPriceNavListings = mainPage.find('.Left #SideShopByPrice').first().find('.BlockContent .treeview li');
 		var shopByPriceListingCounter = 0;
 		shopByPriceNavListings.each(function() {
 			var currentShopByPriceNavListingText = $(this).text();
@@ -257,5 +239,8 @@
 			var allBrandsLink = mainPage.find('.Left .BrandList').first().find('.BlockContent .treeview li.last a');
 			allBrandsLink.prepend('<icon class="navBrandListingImage fa fa-th"></icon>');
 		}
+	}
+	$(document).ready(function () {
+		navMenuFuncs();
 	});
 </script>
