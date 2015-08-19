@@ -163,7 +163,7 @@
 			}\
 			</style>')
         .appendTo('head');
-	function navMenuFuncs() {
+	$(document).ready(function () {
 		$('.hitarea.expandable-hitarea').click();
 		var mainPage = $(this);
 		//Add visual cues to Category list items
@@ -239,8 +239,5 @@
 			var allBrandsLink = mainPage.find('.Left .BrandList').first().find('.BlockContent .treeview li.last a');
 			allBrandsLink.prepend('<icon class="navBrandListingImage fa fa-th"></icon>');
 		}
-	}
-	$(document).ready(function () {
-		navMenuFuncs();
 	});
 </script>
