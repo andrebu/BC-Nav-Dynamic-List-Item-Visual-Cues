@@ -66,6 +66,7 @@ BigCommerce Navigation Dynamic List Item Visual Cues
 8. [jQuery.prepend()](http://api.jquery.com/prepend/)
 9. [The Shapes of CSS - CSS-Tricks](https://css-tricks.com/examples/ShapesOfCSS/)
 10. [jQuery: select all elements of a given class on hover, except for this](http://stackoverflow.com/questions/13625862/jquery-select-all-elements-of-a-given-class-on-hover-except-for-this)
+11. [Hover on “Everything But”](https://css-tricks.com/hover-on-everything-but/)
 
 
 ------------------------------------------------------------------------------------
