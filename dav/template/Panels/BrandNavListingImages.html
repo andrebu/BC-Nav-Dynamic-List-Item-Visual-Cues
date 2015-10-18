@@ -1,3 +1,15 @@
+<style>
+.Left #SideShopByBrand .treeview.grayscale a {
+	-webkit-filter: grayscale(0.75);
+	-moz-filter: grayscale(0.75); 
+	filter: grayscale(0.75);
+}
+.Left #SideShopByBrand .treeview.grayscale a.hovered {
+	-webkit-filter: none;
+	-moz-filter: none; 
+	filter: none;
+}
+</style>
 <script language="javascript" type="text/javascript">
 //Side Navigation Brands Logos
     $('<style type="text/css">\
@@ -24,7 +36,7 @@
 			#DrawerMenu #SideShopByBrand .treeview li a .navBrandListingImage {\
 				display: inline-block;\
 				width: 20px;\
-				padding: 0 16px 0 6px;\
+				margin: 0 16px 0 6px;\
 				vertical-align: middle;\
 				text-align: center;\
 			}\
@@ -183,61 +195,31 @@
 				currentShopByPriceNavListingAnchor.prepend(dollarSignInsert);
 			}
 		});
-		
-		//Visit All Brands page and retrive HTML
-		$.ajax({
-			url: "/brands/",
-		    type: 'GET',
-		    dataType: 'html',
-		    success : function(brandPage) {
-			    brandImagesListings(brandPage);
-			}
-		});
-		
 		//Use the data passed earlier via AJAX to attach brand images to respective nav brand list items
 		var navBrandListings = mainPage.find('.Left .BrandList').first().find('.BlockContent .treeview li:not(.last)');
 		var mobileNavBrandListings = mainPage.find('.BrandList').first().find('.BlockContent .treeview li:not(.last)');
-		function brandImagesListings(brandPage){
-			var brandNameImagePairs = [];
-			var brandNameImagePair = {};
-			var brandPageListings = $(brandPage).find('.SubBrandListGrid');
-			brandPageListings.find('li:not(.RowDivider)').each(function() {
-			    var brandText = $(this).find('.brand-name').text();
-			    var brandUrl = $(this).find('.brand-img img').attr('src');
-			    brandNameImagePairs[brandText] = brandUrl;
-				return brandNameImagePairs;
-			});
+		function brandImagesListings(){
 			navBrandListings.each(function() {
 				var navBrandText = $(this).text();
-				var currentBrandListing = $(this).find('a:contains("' + navBrandText + '")');
-				var brandImageInsert = '<img class="navBrandListingImage" src="' + brandNameImagePairs[navBrandText] + '" />' +
-										'<span class="navBrandLiName">' + navBrandText + '</span>';
-				currentBrandListing.html(brandImageInsert);
+				var brandClass = navBrandText.toLowerCase().replace(/\.|\-|\ /ig, '');
+				$(this).find('.navBrandListingImage').addClass('sprite').addClass(brandClass);
 			});
 			mobileNavBrandListings.each(function() {
 				var navBrandText = $(this).text();
-				var currentBrandListing = $(this).find('a:contains("' + navBrandText + '")');
-				var brandImageInsert = '<img class="navBrandListingImage" src="' + brandNameImagePairs[navBrandText] + '" />';
-				currentBrandListing.prepend(brandImageInsert);
+				var brandClass = navBrandText.toLowerCase().replace(/\.|\-|\ /ig, '');
+				$(this).find('.navBrandListingImage').addClass('sprite').addClass(brandClass);
 			});
+
 			navBrandListings.parent().addClass('withBrandImages');
 			mobileNavBrandListings.parent().addClass('withBrandImages');
+			$('.main #SideShopByBrand .treeview').hover(function(){ $(this).toggleClass('grayscale'); });
 			var navBraLiAnc = mainPage.find('.Left .BrandList').first().find('.BlockContent .treeview li:not(.last) a');
 			var navBrandListingImage = $('.navBrandListingImage');
-			navBraLiAnc.on({
-		        mouseenter: function(event) {
-			        navBrandListingImage.not($(this).find('img')).css('-webkit-filter', 'grayscale(0.75)',
-																		'-moz-filter', 'grayscale(0.75)',
-																		'filter', 'grayscale(0.75)');
-		        },
-		        mouseleave: function(event) {
-			        navBrandListingImage.css('-webkit-filter', 'none',
-												'-moz-filter', 'none',
-												'filter', 'none');
-		        }
-	        });
+			navBraLiAnc.hover(function(){ $(this).toggleClass('hovered'); });
 			var allBrandsLink = mainPage.find('.Left .BrandList').first().find('.BlockContent .treeview li.last a');
+
 			allBrandsLink.prepend('<icon class="navBrandListingImage fa fa-th"></icon>');
 		}
+		brandImagesListings();
 	});
 </script>
